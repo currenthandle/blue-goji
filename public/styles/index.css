@@ -1,0 +1,56 @@
+/* Nav Header */
+.navbar , .container-fluid{
+	background-color: #ffffff;
+}
+.navbar-brand{
+	padding: .5rem 0 0 .9rem;
+}
+.navbar-brand > img{
+	padding: 0;
+	width: 4.4rem;
+	vertical-align: top; 
+}
+.navbar-nav {
+	width: 75%;
+	margin-left: 6%;
+}
+.navbar-nav li {
+	width: 20%;
+	display: block;
+	float: left;
+}
+.navbar-nav li a {
+	margin-top: .4rem;
+	padding: 1rem;
+	color: #27bcfe !important;
+}
+.navbar button {
+	margin-top: .9rem;
+	//margin-left: 3.7rem;
+	background-color: #0eb5fe;
+	color: white;
+	font-size: 1.4rem;
+	font-weight: bold;
+	padding: .4rem .8rem .4rem .8rem; 
+	border-color: #0dacf1;
+}
+
+/* Video Grid */
+#video-grid{
+	margin-top: 3.5rem;
+}
+.grid-vid , .grid-pic{
+	width: 100%;
+}
+
+
+@media screen and (min-width: 0) and (max-width: 768px) {
+	#video-grid{
+		display: none;
+	}
+}
+@media screen and (min-width: 768px) {
+	#carousel-view{
+		display: none;
+	}
+}
