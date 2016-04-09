@@ -6,5 +6,5 @@ var server = http.createServer(function(req, res) {
 	st(req, res)
 })
 
-server.listen(5000)
+server.listen(process.env.PORT || 5000)
 console.log('Server running on port 5000')
