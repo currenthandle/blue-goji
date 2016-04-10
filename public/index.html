@@ -30,6 +30,48 @@
 			<button type="button" class="btn btn-default navbar-btn">Buy Now</button>
 		</div> <!-- container-fluid -->
 	</nav>
+	<div class='container'>
+		<div id='photo-carousel'>
+			<img id="carousel-image" src="img/iphone.png"> 			
+			
+			<span id='left'>LEFT</span>
+			<span id='right'>RIGHT</span>
+			
+			
+			<img class='active' src="img/dad_and_boy_bike.png">
+			<img src="img/excercise_and_win.png">
+			<img src="img/dad_and_boy_box.png">
+			<img src="img/ipad_game.png">
+			<img src="img/iphone.png">
+			<ol>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+		</div>
+	</div> <!-- container -->
+	<script> 
+		var currentState = document.getElementById('carousel-image')
+		var currentImage = 0
+		
+		var leftButton = document.getElementById('left')
+		var rightButton = document.getElementById('right')
+		
+		var xhr = new XMLHttpRequest()
+		xhr.open('GET', '/carousel-images')
+		
+		leftButton.onclick = function () {
+			
+		]
+		
+		
+		
+	</script>
+	
+	
+	
 	<div class="contail-fluid" id="carousel-view">
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
