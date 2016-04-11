@@ -31,10 +31,10 @@ button {
 	padding-left: 1rem;
 	color: #0eb5fe;
 }
-#dropdownLi i:hover {
-	color: #5ac40f;
+.dropdown-icon-clicked {
+	color: #5ac40f !important;
 }
-#dropdownLi i:active{
+#dropdownLi i:hover {
 	color: #5ac40f;
 }
 #dropdown-ul li {
