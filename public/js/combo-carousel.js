@@ -48,8 +48,6 @@ xhr('/carousel-photos', function (err, resp, body) {
 			if (currentState === 0){ currentState = images.length-1 } 
 			else { currentState-- }
 			
-			
-			//currentImage.setAttribute("src", "img/carousel-images/"+ images[currentState])
 			indicators[currentState].setAttribute('class', 'indicator active')
 			itemImages[currentState].setAttribute('class', 'item active')	
 		}	
@@ -60,10 +58,62 @@ xhr('/carousel-photos', function (err, resp, body) {
 			if (currentState === images.length-1){ currentState = 0 } 
 			else { currentState++ }
 			
-			//currentImage.setAttribute("src", "img/carousel-images/"+ images[currentState])
 			indicators[currentState].setAttribute('class', 'indicator active')
 			itemImages[currentState].setAttribute('class', 'item active')	
 		}	
+		document.addEventListener('touchstart', handleTouchStart, false);
+		document.addEventListener('touchmove', handleTouchMove, false);
+		var xDown = null
+		var yDown = null 
+
+		function handleTouchStart(evt) {                                         
+			xDown = evt.touches[0].clientX;                                      
+			yDown = evt.touches[0].clientY;                                      
+		};                                                
+
+		function handleTouchMove(evt) {
+			if ( ! xDown || ! yDown ) {
+				return;
+			}
+
+			var xUp = evt.touches[0].clientX;                                    
+			var yUp = evt.touches[0].clientY;
+
+			var xDiff = xDown - xUp;
+			var yDiff = yDown - yUp;
+
+			if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+				if ( xDiff > 0 ) {
+					indicators[currentState].setAttribute('class', 'indicators')
+					itemImages[currentState].setAttribute('class', 'item')
+					
+					if (currentState === 0){ currentState = images.length-1 } 
+					else { currentState-- }
+					
+					indicators[currentState].setAttribute('class', 'indicator active')
+					itemImages[currentState].setAttribute('class', 'item active')	
+				} else {
+					indicators[currentState].setAttribute('class', 'indicators')
+					itemImages[currentState].setAttribute('class', 'item')
+					
+					if (currentState === images.length-1){ currentState = 0 } 
+					else { currentState++ }
+					
+					indicators[currentState].setAttribute('class', 'indicator active')
+					itemImages[currentState].setAttribute('class', 'item active')	
+				}                       
+			} else {
+				if ( yDiff > 0 ) {
+					/* up swipe */ 
+				} else { 
+					/* down swipe */
+				}                                                                 
+			}
+			/* reset values */
+			xDown = null;
+			yDown = null;                                             
+		};	
+
 	}
 })
 
