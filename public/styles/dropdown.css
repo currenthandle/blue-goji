@@ -1,9 +1,4 @@
-#dropdown-menu {
-	display: none;	
-}
-#dropdown-menu li{
-	display: block;	
-	position: absolute;
+#dropdown-ul {
+	background-color: #fff;
 	z-index: 7;
 }
-
