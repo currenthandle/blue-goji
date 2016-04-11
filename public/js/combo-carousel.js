@@ -13,7 +13,7 @@ console.log('here!')
 xhr('/carousel-photos', function (err, resp, body) {
 	if (err) console.log(err)
 	else{ 
-		console.log('in else')
+		setInterval(moveRight, 15000)
 		var images = JSON.parse(body)
 		images.forEach(function(imageUri, index) {
 			var newLi = document.createElement('li')
