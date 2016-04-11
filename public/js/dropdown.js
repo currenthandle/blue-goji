@@ -1,4 +1,5 @@
 var dropdown = document.getElementById('dropdownLi')
+document.getElementById('dropdown-ul').style.display='none'
 
 dropdown.onclick = function () {
 	var dropdownUl = document.getElementById('dropdown-ul')
