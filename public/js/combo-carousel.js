@@ -17,8 +17,6 @@ xhr('/carousel-photos', function (err, resp, body) {
 		var images = JSON.parse(body)
 		images.forEach(function(imageUri, index) {
 			var newLi = document.createElement('li')
-			//var newContent = document.createTextNode('rawr')
-			//newLi.appendChild(newContent)
 			newLi.setAttribute('class', 'indicator')
 			
 			document.getElementById('indicator-ol').appendChild(newLi)
@@ -29,19 +27,16 @@ xhr('/carousel-photos', function (err, resp, body) {
 			
 			var newImage = document.createElement('img')
 			newImage.setAttribute('src', "img/carousel-images/"+ images[index])
-			console.log('newItem', newItem)	
 			newItem.appendChild(newImage)
 			document.getElementById('slide-wrapper').appendChild(newItem)
 			
 			itemImages.push(newItem)
 		})
-		
 			
-		//currentImage.setAttribute("src", "img/carousel-images/"+ images[currentState])
 		indicators[currentState].setAttribute('class', 'indicator active')
 		itemImages[currentState].setAttribute('class', 'item active')	
-		
-		leftButton.onclick = function () {
+
+		function moveLeft() {
 			indicators[currentState].setAttribute('class', 'indicators')
 			itemImages[currentState].setAttribute('class', 'item')
 			
@@ -51,7 +46,7 @@ xhr('/carousel-photos', function (err, resp, body) {
 			indicators[currentState].setAttribute('class', 'indicator active')
 			itemImages[currentState].setAttribute('class', 'item active')	
 		}	
-		rightButton.onclick = function () {
+		function moveRight() {
 			indicators[currentState].setAttribute('class', 'indicators')
 			itemImages[currentState].setAttribute('class', 'item')
 			
@@ -61,47 +56,32 @@ xhr('/carousel-photos', function (err, resp, body) {
 			indicators[currentState].setAttribute('class', 'indicator active')
 			itemImages[currentState].setAttribute('class', 'item active')	
 		}	
+		
+		leftButton.onclick = moveLeft
+		rightButton.onclick = moveRight
+		
 		document.addEventListener('touchstart', handleTouchStart, false);
 		document.addEventListener('touchmove', handleTouchMove, false);
 		var xDown = null
 		var yDown = null 
 
-		function handleTouchStart(evt) {                                         
-			xDown = evt.touches[0].clientX;                                      
-			yDown = evt.touches[0].clientY;                                      
-		};                                                
-
+		function handleTouchStart(evt) {
+			xDown = evt.touches[0].clientX                                      
+			yDown = evt.touches[0].clientY                                      
+		}                
 		function handleTouchMove(evt) {
 			if ( ! xDown || ! yDown ) {
-				return;
+				return
 			}
-
-			var xUp = evt.touches[0].clientX;                                    
-			var yUp = evt.touches[0].clientY;
-
-			var xDiff = xDown - xUp;
-			var yDiff = yDown - yUp;
+			var xUp = evt.touches[0].clientX                                    
+			var yUp = evt.touches[0].clientY
+			
+			var xDiff = xDown - xUp
+			var yDiff = yDown - yUp
 
 			if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-				if ( xDiff > 0 ) {
-					indicators[currentState].setAttribute('class', 'indicators')
-					itemImages[currentState].setAttribute('class', 'item')
-					
-					if (currentState === 0){ currentState = images.length-1 } 
-					else { currentState-- }
-					
-					indicators[currentState].setAttribute('class', 'indicator active')
-					itemImages[currentState].setAttribute('class', 'item active')	
-				} else {
-					indicators[currentState].setAttribute('class', 'indicators')
-					itemImages[currentState].setAttribute('class', 'item')
-					
-					if (currentState === images.length-1){ currentState = 0 } 
-					else { currentState++ }
-					
-					indicators[currentState].setAttribute('class', 'indicator active')
-					itemImages[currentState].setAttribute('class', 'item active')	
-				}                       
+				if ( xDiff > 0 ) { moveLeft() } 
+				else { moveRight() }                       
 			} else {
 				if ( yDiff > 0 ) {
 					/* up swipe */ 
@@ -112,8 +92,7 @@ xhr('/carousel-photos', function (err, resp, body) {
 			/* reset values */
 			xDown = null;
 			yDown = null;                                             
-		};	
-
+		}	
 	}
 })
 
