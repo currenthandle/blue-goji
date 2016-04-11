@@ -1,0 +1,37 @@
+#expanded-navbar {
+	padding-top: 1.4rem;
+	padding-left: 0;
+	list-style-type: none;
+	border-bottom: solid .1rem #e7e7e7;
+}
+#expanded-navbar > li {
+	display: inline-block;
+	width: 14% !important;
+}
+#expanded-navbar > li:first-child {
+	margin-left: 7rem;
+}
+#expanded-navbar button{
+	margin-top: -0.5rem !important;
+	position: absolute;
+	right: 4rem;
+	top: 1rem;
+}
+
+#expanded-navbar img{
+	//padding-left: .6rem;
+	width: 4.4rem;
+	float: left;
+	position: absolute;
+	left: 0;
+	top: .4rem;
+}
+#expanded-navbar > li > a{
+	color: #13b6fe;
+	text-decoration: none;
+}
+
+#expanded-navbar > li > a:hover{
+	color: #5ac40f;
+}
+

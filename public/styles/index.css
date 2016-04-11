@@ -52,9 +52,15 @@
 	#video-grid{
 		display: none;
 	}
+	#expanded-navbar{
+		display: none;
+	}
 }
 @media screen and (min-width: 768px) {
 	#carousel-view{
+		display: none;
+	}
+	#collapsed-navbar{
 		display: none;
 	}
 }

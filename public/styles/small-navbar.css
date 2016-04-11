@@ -13,7 +13,7 @@ body{
 }
 button {
 	float: right;
-	margin-top: 0 !important;
+	margin-top: .2rem !important;
 	background-color: #0eb5fe !important;
 	color: white !important;
 	font-size: 1.4rem;
@@ -48,7 +48,7 @@ button {
 	margin-left: 3rem;
 	margin-right: 3rem;
 }
-body > ul {
+#collapsed-navbar {
 	padding: 0;
 	border-bottom: solid .1rem #e7e7e7;
 	padding-bottom: .6rem;
