@@ -5,7 +5,7 @@
 .navbar-brand{
 	padding: .5rem 0 0 .9rem;
 }
-.navbar-brand > img{
+.logo-img{
 	padding: 0;
 	width: 4.4rem;
 	vertical-align: top; 
@@ -33,6 +33,10 @@
 	font-weight: bold;
 	padding: .4rem .8rem .4rem .8rem; 
 	border-color: #0dacf1;
+}
+
+.red-indicator {
+	color: red;
 }
 
 /* Video Grid */
