@@ -7,6 +7,12 @@
 	top: 55px;	
 	left: 52px;
 }
+#collapsed-navbar > li > ul  a {
+	color: #0fb5fe;	
+}
+#collapsed-navbar > li > ul  a:hover {
+	color: #6aca27;
+}
 body{
 	margin: 0;
 	text-align: center;
