@@ -38,7 +38,36 @@
 .red-indicator {
 	color: red;
 }
-
+#vid-grid{
+	position: relative;
+}
+#vid-grid video{
+	position: absolute;
+	
+}
+#vid-grid .left{
+	width: 27%;
+	left: 3%;
+	margin-right: 5.5%
+}
+#vid-grid .center{
+	width: 34%;
+	margin: 0 auto 0 auto;
+	left: 0;
+	right: 0;
+	
+}
+#vid-grid .right{
+	width: 27%;
+	right: 3%;
+	margin-left: 2.5%
+}
+#vid-grid .top{
+	top: 0;
+}
+#vid-grid .bottom{
+	bottom: 0;
+}
 /* Video Grid */
 #video-grid{
 	margin-top: 3.5rem;
