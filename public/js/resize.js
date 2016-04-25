@@ -2,13 +2,9 @@ function resize() {
 	var grid = document.getElementById('vid-grid')
 	var gridWidth = grid.clientWidth
 	
-	console.log('gridWidth', gridWidth)
+	var gridHeight = gridWidth * (6.7/18)
 
-	var gridHeight = gridWidth * (7/18)
-
-	console.log('gridHeight', gridHeight)
-	grid.setAttribute('style', 'height: ' + gridHeight)
-	console.log('actual height', grid.clientHeight)
+	grid.setAttribute('style', 'height: ' + gridHeight+'px')
 }
 window.onload = resize
 window.onresize = resize
