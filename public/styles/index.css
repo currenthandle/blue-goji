@@ -50,19 +50,19 @@
 	
 }
 #vid-grid .left{
-	width: 29%;
-	left: 3%;
+	width: 30%;
+	left: 0;
 }
 #vid-grid .center{
-	width: 36%;
+	width: 40%;
 	margin: 0 auto 0 auto;
 	left: 0;
 	right: 0;
 	
 }
 #vid-grid .right{
-	width: 29%;
-	right: 3%;
+	width: 30%;
+	right: 0;
 }
 #vid-grid .top{
 	top: 0;
