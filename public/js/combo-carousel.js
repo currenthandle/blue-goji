@@ -80,8 +80,8 @@ xhr('/carousel-photos', function (err, resp, body) {
 			var yDiff = yDown - yUp
 
 			if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-				if ( xDiff > 0 ) { moveLeft() } 
-				else { moveRight() }                       
+				if ( xDiff > 0 ) { moveRight() } 
+				else { moveLeft() }                       
 			} else {
 				if ( yDiff > 0 ) {
 					/* up swipe */ 
