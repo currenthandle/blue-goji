@@ -41,24 +41,27 @@
 #vid-grid{
 	position: relative;
 	height: 400px;
+	margin-top: 3rem;
+	background-color: #F0F0F0;
+	padding: 1rem 0 1rem 0;
 }
 #vid-grid video{
 	position: absolute;
 	
 }
 #vid-grid .left{
-	width: 27%;
+	width: 28%;
 	left: 3%;
 }
 #vid-grid .center{
-	width: 34%;
+	width: 35%;
 	margin: 0 auto 0 auto;
 	left: 0;
 	right: 0;
 	
 }
 #vid-grid .right{
-	width: 27%;
+	width: 28%;
 	right: 3%;
 }
 #vid-grid .top{
