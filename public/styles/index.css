@@ -48,11 +48,11 @@
 	position: absolute;
 	text-align: center;	
 }
+#vid-grid div:hover .description {
+	  display: block; 
+}
 #vid-grid video{
 	position: relative;
-}
-#vid-grid div:hover + .description{
-	display: block;	
 }
 #vid-grid div span{
 	z-index: 6;	
