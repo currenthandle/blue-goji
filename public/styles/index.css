@@ -45,9 +45,14 @@
 	background-color: #F0F0F0;
 	padding: 1rem 0 1rem 0;
 }
-#vid-grid video{
+#vid-grid div{
 	position: absolute;
 	
+}
+#vid-grid div span{
+	z-index: 6;	
+	position: absolute;
+	bottom: 0;
 }
 #vid-grid .left{
 	width: 30%;
