@@ -51,7 +51,7 @@
 #vid-grid video{
 	position: relative;
 }
-#vide-grid div:hover + .description{
+#vid-grid div:hover + .description{
 	display: block;	
 }
 #vid-grid div span{
