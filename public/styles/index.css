@@ -42,17 +42,26 @@
 	position: relative;
 	height: 400px;
 	margin-top: 3rem;
-	background-color: #F0F0F0;
 	padding: 1rem 0 1rem 0;
 }
 #vid-grid div{
 	position: absolute;
-	
+	text-align: center;	
+}
+#vid-grid video{
+	position: relative;
+}
+#vide-grid div:hover + .description{
+	display: block;	
 }
 #vid-grid div span{
 	z-index: 6;	
 	position: absolute;
-	bottom: 0;
+	bottom: 4rem;
+	left: 2rem;
+	right: 2rem;
+	background-color: #F0F0F0;
+	display: none;
 }
 #vid-grid .left{
 	width: 30%;

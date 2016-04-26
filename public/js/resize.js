@@ -2,7 +2,7 @@ function resize() {
 	var grid = document.getElementById('vid-grid')
 	var gridWidth = grid.clientWidth
 	
-	var gridHeight = gridWidth * (6.3/18)
+	var gridHeight = gridWidth * (7.1/18)
 
 	grid.setAttribute('style', 'height: ' + gridHeight+'px')
 }
